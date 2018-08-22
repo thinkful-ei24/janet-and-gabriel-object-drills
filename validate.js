@@ -19,8 +19,6 @@ const expectedKeys = ['id', 'name', 'age', 'city'];
 
 function validateKeys(object, expectedKeys) {
   for (let i = 0; i < Object.keys(object).length; i++) {
-    const element = Object.keys(object)[i];
-    const expectedKey = expectedKeys[i];
     if (Object.keys(object)[i] !== expectedKeys[i]) {
       return false;
     }
