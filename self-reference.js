@@ -6,21 +6,21 @@ function personMaker() {
     lastName: 'Jones',
     // replace `null` with a function that uses self reference to return
     // full name
-    fullName: function(){
-        return `${this.firstName} ${this.lastName}`;
-    },
+    fullName: function() {
+      return `${this.firstName} ${this.lastName}`;
+    }
   };
   return person;
 }
-  
-/* From here down, you are not expected to 
-     understand.... for now :)  
-     
-     
+
+/* From here down, you are not expected to
+     understand.... for now :)
+
+
      Nothing to see here!
-     
+
   */
-  
+
 (function testPersonMaker() {
   var person = personMaker();
   if (typeof person !== 'object') {
@@ -34,7 +34,7 @@ function personMaker() {
   if (person.fullName() !== 'Paul Jones') {
     console.error(
       'ERROR: The value for `fullName` should be "Paul Jones" but was ' +
-          person.fullName()
+        person.fullName()
     );
     return false;
   }
@@ -43,11 +43,10 @@ function personMaker() {
   if (person.fullName() !== 'Lisa Simpson') {
     console.error(
       '`personMaker` is not using self reference correctly. ' +
-          'When firstName set to "Lisa" and lastName set to "Simpson", ' +
-          'should return "Lisa Simpson" but returned ' +
-          person.fullName()
+        'When firstName set to "Lisa" and lastName set to "Simpson", ' +
+        'should return "Lisa Simpson" but returned ' +
+        person.fullName()
     );
   }
   console.log('SUCCESS: `updateObject` works correctly!');
 })();
-  
