@@ -7,14 +7,8 @@ const arrayOfObjects = [
   { name: 'Aragorn', jobTitle: 'The one true rightful King of Gondor' }
 ];
 
-arrayOfObjects.forEach(person => {
-  if (person.hasOwnProperty('boss')) {
-    console.log(
-      `${person.jobTitle} ${person.name} reports to ${person.boss}. `
-    );
-  } else {
-    console.log(
-      `${person.jobTitle} ${person.name} doesn't report to anybody. `
-    );
-  }
-});
+for (const person of arrayOfObjects) {
+  person.hasOwnProperty('boss')
+    ? console.log(`${person.jobTitle} ${person.name} reports to ${person.boss}`)
+    : console.log(`${person.jobTitle} ${person.name} reports to no one`);
+}
