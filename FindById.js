@@ -5,22 +5,21 @@
 const scratchData = [
   { id: 22, foo: 'bar' },
   { id: 28, foo: 'bizz' },
-  { id: 19, foo: 'bazz' },
+  { id: 19, foo: 'bazz' }
 ];
-  
+
 function findById(items, idNum) {
   // your code here
-    return items.find(item => item.id === idNum);
-
+  return items.find(item => item.id === idNum);
 }
-  
+
 //
-  
+
 function testIt() {
   const testData = [
     { id: 1, foo: 'bar' },
     { id: 2, foo: 'bizz' },
-    { id: 3, bang: 'boo' },
+    { id: 3, bang: 'boo' }
   ];
   const result = findById(testData, 3);
   if (!(result && result !== null && typeof result === 'object')) {
@@ -41,6 +40,5 @@ function testIt() {
   }
   console.log('SUCCESS: `findByid` is working');
 }
-  
+
 testIt();
-  
